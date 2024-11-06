@@ -231,3 +231,13 @@ setTimeout(() => {
 }, 100);
 
 toastr.info('Are you the 6 fingered man?')
+
+
+function toggleMenu() {
+    const filterContainer = document.querySelector('.filter-container');
+    if (filterContainer.style.display === 'none' || filterContainer.style.display === '') {
+        filterContainer.style.display = 'block'; // Menü göster
+    } else {
+        filterContainer.style.display = 'none'; // Menü gizle
+    }
+}

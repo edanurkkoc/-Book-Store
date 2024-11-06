@@ -299,3 +299,163 @@ color: var(--purple);
     color:aliceblue;
     margin-bottom: 2rem;
 }
+/* Kitap listesini düzenleme */
+.book_list {
+    display: flex;
+    flex-wrap: wrap; /* Kartların taşmasını önler */
+    justify-content: space-between; /* Kartlar arasında boşluk bırakır */
+}
+
+/* Ürün kartları için stil ayarları */
+.book_item {
+    flex: 1 1 30%; /* Büyük ekranlarda 3 kart yan yana */
+    margin: 10px;
+}
+.menu-toggle {
+    display: none; /* Başlangıçta gizli */
+    font-size: 2rem;
+    cursor: pointer;
+    margin: 20px; /* İkon için boşluk */
+}
+
+
+/* Mobil görünüm için */
+/* @media (max-width: 768px) {
+ 
+} */
+@media (max-width: 768px) {
+    .menu-toggle {
+        display: block; 
+    }
+    .book_item {
+        flex: 1 1 100%; 
+    }
+    .book_list {
+        justify-content: center; 
+    }
+    .filter-container {
+        display: none; 
+    }
+    .book_list {
+        flex-direction: column; 
+    }
+    .book_card img {
+      width: 100%; /* Resmi kapsayıcıya tam olarak yay */
+      height: 100px; /* Orantılı yükseklik */
+    }
+  
+    .book_star_rate {
+      display: none; /* Yıldızları gizle */
+    }
+  
+    .col-6 {
+      width: 100%; /* Tam genişlik */
+    }
+    .book_list{
+        padding-left: 20px;
+    }
+    .filter-container {
+        display: flex; /* Flexbox kullan */
+        flex-wrap: wrap; /* Taşmasını önle */
+        justify-content: flex-start; /* Soldan başlat */
+    }
+
+    .filter {
+        display: flex; /* Flex kullan */
+        flex-direction: row; /* Sağdan sola dizecek şekilde ayarla */
+        margin: 0; /* Kenar boşluklarını sıfırla */
+    }
+
+    .filter li {
+        margin: 0 3px; /* Her bir filtre arasında boşluk bırak */
+        font-size:xx-small;
+        margin-left: 0;
+        color: #1c2a39;
+        font-weight: 600;
+        
+    }
+    .filter li.active::before {
+        content: none; /* Noktayı kaldır */
+    }
+    .menu-toggle{
+        display: none;
+    }
+    .book_desriptions{
+        display: none;
+    }
+    .filter_background{
+        margin-left: 0;
+    }
+    .btn_purple{
+        width: 100px;
+    }
+    .menu li{
+        font-size: small;
+    }
+    .menu_icons li {
+        font-size: 1rem; /* İkon boyutunu ayarla */
+        margin: 0 2px; /* İkonlar arası boşluğu ayarla */
+    }
+  }
+
+
+
+
+/* Mobil görünümde ikon görünür hale gelir */
+@media (max-width: 320px) {
+    .book_card img {
+      width: 100%; /* Resmi kapsayıcıya tam olarak yay */
+      height: 100px; /* Orantılı yükseklik */
+    }
+  
+    .book_star_rate {
+      display: none; /* Yıldızları gizle */
+    }
+  
+    .col-6 {
+      width: 100%; /* Tam genişlik */
+    }
+    .book_list{
+        padding-left: 20px;
+    }
+    .filter-container {
+        display: flex; /* Flexbox kullan */
+        flex-wrap: wrap; /* Taşmasını önle */
+        justify-content: flex-start; /* Soldan başlat */
+    }
+
+    .filter {
+        display: flex; /* Flex kullan */
+        flex-direction: row; /* Sağdan sola dizecek şekilde ayarla */
+        margin: 0; /* Kenar boşluklarını sıfırla */
+    }
+
+    .filter li {
+        margin: 0 3px; /* Her bir filtre arasında boşluk bırak */
+        font-size:xx-small;
+        margin-left: 0;
+        
+    }
+    .filter li.active::before {
+        content: none; /* Noktayı kaldır */
+    }
+    .menu-toggle{
+        display: none;
+    }
+    .book_desriptions{
+        display: none;
+    }
+    .filter_background{
+        margin-left: 0;
+    }
+    .btn_purple{
+        width: 100px;
+    }
+    .menu li{
+        font-size: small;
+    }
+    .menu_icons li {
+        font-size: 1rem; /* İkon boyutunu ayarla */
+        margin: 0 2px; /* İkonlar arası boşluğu ayarla */
+    }
+  }
